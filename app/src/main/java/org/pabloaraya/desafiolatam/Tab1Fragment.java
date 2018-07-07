@@ -15,13 +15,15 @@ import android.widget.Toast;
 
 public class Tab1Fragment extends Fragment {
 
+    private CallbackPet callbackPet;
 
     public Tab1Fragment() {
         // Required empty public constructor
     }
 
-
-
+    public void setCallbackPet(CallbackPet callbackPet) {
+        this.callbackPet = callbackPet;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,28 +50,13 @@ public class Tab1Fragment extends Fragment {
 
                     RadioButton radiobutton = radiogroup.findViewById(id);
                     String answer = radiobutton.getText().toString();
-                    showDialog(answer);
+                    callbackPet.savePet(answer);
 
                 } else {
                     Toast.makeText(getContext(), "Marca una respuesta", Toast.LENGTH_LONG).show();
                 }
             }
         });
-
-    }
-
-    private void showDialog(String answer){
-
-        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-        alertDialog.setTitle("Hola AnimalLover");
-        alertDialog.setMessage("Te gustan los " + answer);
-        alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-        alertDialog.show();
 
     }
 }
