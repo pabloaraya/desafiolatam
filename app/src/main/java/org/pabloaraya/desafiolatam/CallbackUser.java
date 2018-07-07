@@ -4,5 +4,5 @@ public interface CallbackUser {
 
   void saveName(String name);
 
-  void saveAge(int age);
+  void saveAge(String age);
 }
