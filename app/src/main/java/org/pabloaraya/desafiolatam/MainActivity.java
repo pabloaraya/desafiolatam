@@ -47,18 +47,16 @@ public class MainActivity extends AppCompatActivity {
 
       @Override
       public void onTabUnselected(TabLayout.Tab tab) {
-
+        //Something
       }
 
       @Override
       public void onTabReselected(TabLayout.Tab tab) {
-
+        //Something
       }
     });
-
-
-
   }
+
 
 
 }

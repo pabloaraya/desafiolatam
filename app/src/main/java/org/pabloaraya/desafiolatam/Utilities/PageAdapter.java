@@ -15,7 +15,6 @@ public class PageAdapter extends FragmentStatePagerAdapter {
     public PageAdapter(FragmentManager fm, int tabs) {
         super(fm);
         this.tabNumber = tabs;
-
     }
 
     @Override
